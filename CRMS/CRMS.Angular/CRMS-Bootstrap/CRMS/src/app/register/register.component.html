@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <form class="col-md-6" (ngSubmit)="register()" [formGroup]="registerForm" ngNativeValidate>
+      <div class="text-center">
+        <h1>Register</h1>
+      </div>
+      <br/>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="empid">Emp ID</label>
+          <input type="text" class="form-control" name="empid" id="txtempid" formControlName="empid" placeholder="Employee Id">
+          <small [hidden]="registerForm.controls.empid.valid || registerForm.controls.empid.untouched" class="text-danger">
+              Employee Id is required
+          </small>
+        </div>
+
+
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="txtFirstname">Firstname</label>
+          <input type="text" class="form-control" id="txtFirstname" formControlName="firstname" placeholder="Firstname">
+          <small [hidden]="registerForm.controls.firstname.valid || registerForm.controls.firstname.untouched" class="text-danger">
+              Firstname is required
+          </small>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="txtLastname">Lastname</label>
+          <input type="text" class="form-control" id="txtLastname" formControlName="lastname" placeholder="Lastname">
+          <small [hidden]="registerForm.controls.lastname.valid || registerForm.controls.lastname.untouched" class="text-danger">
+              Lastname is required
+          </small>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="txtUserType">User Type</label>
+          <select id="txtUserType" class="form-control" formControlName="userType">
+            <option selected value="">Choose...</option>
+            <option value="2">Employee</option>
+            <option value="1">Facility Manager</option>
+          </select>
+          <small [hidden]="registerForm.controls.userType.valid || registerForm.controls.userType.untouched" class="text-danger">
+              User Type is required
+          </small>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="txtEmail">Email</label>
+          <input type="email" class="form-control" id="txtemail" formControlName="email" placeholder="Email">
+          <small [hidden]="registerForm.controls.email.valid || registerForm.controls.email.untouched" class="text-danger">
+              Email is required
+          </small>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="txtPassword">Password</label>
+          <input type="password" class="form-control" id="txtPassword" formControlName="password" placeholder="Password">
+          <small [hidden]="registerForm.controls.password.valid || registerForm.controls.password.untouched" class="text-danger">
+              Email is required
+          </small>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="txtConfirmPassword">Confirm Password</label>
+          <input type="password" class="form-control" id="txtConfirmPassword" formControlName="confirmPassword" placeholder="Confirm Password">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="txtmobile">Mobile No.</label>
+          <input type="text" class="form-control" id="txtmobile" formControlName="phoneNumber" placeholder="Mobile No.">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="txtAddress">Address</label>
+          <textarea class="form-control" id="txtAddress" formControlName="empAddress" placeholder="Address"></textarea>
+          <!-- <input type="text" class="form-control"  id="txtAddress" [(ngModel)]="register.empAddress" placeholder="Address"> -->
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="registerForm.invalid" id='registerUser' class="btn btn-success">Register</button>
+      <a class="btn btn-primary"  routerLink="/login" routerLinkActive="active">
+        <span>Login</span>
+      </a>
+    </form>
+  </div>
+</div>

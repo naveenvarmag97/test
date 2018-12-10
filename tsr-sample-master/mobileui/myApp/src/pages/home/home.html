@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar style="background-color: rgba(0, 0, 0, 0.616)">
+    <ion-title>Leave Management System</ion-title>
+  </ion-navbar>
+  <div>
+
+</div>
+</ion-header>
+
+<ion-content padding style="margin-top: 20px;background-color:white">
+  <div class="row header">
+    <div class="col">Employee ID</div>
+    <div class="col">Employee Name</div>
+    <div class="col"></div>  
+    <div class="col"></div>
+  </div>
+  <div class="row" *ngFor="let employee of employees; let i = index" [attr.data-index]="i">
+    <div class="col" ><h5>{{employee.empId}}</h5></div>
+    <div class="col"> <h5>{{employee.empName}}</h5></div>
+    <div class="col"><img src="{{employee.empProfileUrl}}" style ="width:50px;height:50px"></div>
+    <div class="col"><button ion-button type="button"  (click)="loginForm(i)"  class="btn-info">Login</button></div>
+  </div>
+</ion-content>

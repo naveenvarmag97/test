@@ -1,0 +1,79 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/HexaInnovLab/Target-State-Role</url>
+        <credentialsId>YogeshD-Hexaware2</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.BatchFile>
+      <command>echo $GIT_AUTHOR_NAME&#xd;
+&quot;C:\Windows\System32\inetsrv\appcmd.exe&quot; add app /site.name:&quot;Default Web Site&quot; /path:/crms /physicalPath:&quot;D:\dotnetpackage\crms&quot;&#xd;
+::path and physical needs to unique for every run.</command>
+    </hudson.tasks.BatchFile>
+    <hudson.tasks.BatchFile>
+      <command>&#xd;
+cd D:\workspace\workspace\Nuget&#xd;
+cd D:&#xd;
+&#xd;
+nuget.exe restore &quot;D:\workspace\Jenkins\workspace\crmsdotnet-dev\CRMS\CRMS.DotnetCode\CRMS.sln&quot;</command>
+    </hudson.tasks.BatchFile>
+    <hudson.plugins.msbuild.MsBuildBuilder plugin="msbuild@1.29">
+      <msBuildName>msbuild</msBuildName>
+      <msBuildFile>CRMS/CRMS.DotnetCode/CRMS.sln</msBuildFile>
+      <cmdLineArgs>/t:Clean;Rebuild
+/p:DeployOnBuild=true
+ /p:Configuration=Release
+  /P:Configuration=Release
+  /P:DeployOnBuild=True
+  /P:AllowUntrustedCertificate=True
+  /P:CreatePackageOnPublish=True
+
+</cmdLineArgs>
+      <buildVariablesAsProperties>false</buildVariablesAsProperties>
+      <continueOnBuildFailure>false</continueOnBuildFailure>
+      <unstableIfWarnings>false</unstableIfWarnings>
+      <doNotUseChcpCommand>false</doNotUseChcpCommand>
+    </hudson.plugins.msbuild.MsBuildBuilder>
+    <hudson.tasks.BatchFile>
+      <command>cd D:\dotnetpackage ::iis root folder&#xd;
+&#xd;
+&#xd;
+&quot;C:\Program Files (x86)\IIS\Microsoft Web Deploy V3\msdeploy.exe&quot; -verb:sync -source:iisapp=&quot;D:\workspace\Jenkins\workspace\crmsdotnet-dev\CRMS\CRMS.DotnetCode\CRMS&quot; -dest:iisapp=&quot;Default Web Site/crms&quot;,computerName=&quot;localhost&quot;</command>
+    </hudson.tasks.BatchFile>
+  </builders>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>crmsangular-dev</childProjects>
+      <threshold>
+        <name>UNSTABLE</name>
+        <ordinal>1</ordinal>
+        <color>YELLOW</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
+  <buildWrappers/>
+</project>

@@ -1,0 +1,122 @@
+<!-- <div class='page'>
+  <div class='main'>
+<h3 id="heading">Leave Application</h3>
+
+<div class='container' style="background-color:rgba(0, 0, 0, 0.479);">
+  <div class='details'>
+    <div class='emp'>
+    <h5 class='id'>EMPLOYEE ID:    <span style="margin-left:20px;color:aquamarine">{{getEmpId()}}</span></h5>
+    <h5 class='name'>EMPLOYEE NAME:  <span style="margin-left:20px;color:aquamarine"> {{employees1.empName}}</span></h5>
+  </div>
+  <div class='dep'>
+    <h5 class='depart'>DEPARTMENT:<span style="margin-left:20px;color:aquamarine">{{employees1.empDepartment}}</span></h5>
+    <h5 class='man'>MANAGER: <span style="margin-left:20px;color:aquamarine">{{manager.empName}}</span></h5>
+  </div>
+<div class='bal'>
+    <h5>LEAVE BALANCE: <span style="margin-left:20px;color:aquamarine">{{employees1.empLeaveBalance}}</span></h5>
+  </div>
+  </div>
+  <div class='applyPart'>
+    
+    <div class='dates'>
+    <div class='start'><h5>Start Date:</h5>  <input type="date" class="form-control"  name="startDate" min="{{cDate | date: 'MM/dd/yyyy'}}" [(ngModel)]="startDate" #leavestart="ngModel" required style="color:black"></div>
+    <div class='end'><h5>End Date:</h5>  <input type="date" class="form-control" name="endDate" [min]="startDate" [(ngModel)]="endDate" #leaveend="ngModel" required style="color:black"></div>
+    <div class='noOfDays'><h5>No Of Days:</h5><span style="margin-left:20px;color:aquamarine;"><h4>{{noOfDays}}</h4></span></div>
+  </div>
+  <div class='type'></div>
+  <div class='reason'><h5>Reason:</h5>   <input type="text" class="form-control" name="reason" [(ngModel)]="reason" #leavereason="ngModel" required />
+   </div>
+  <div class='actions'>
+    <div class='submit'><button type="SUBMIT" class="btn btn-primary" (click)="applyButton()">Update</button></div>
+    <div class='cancel'><button type="SUBMIT" Class="btn btn-danger" [routerLink]="['/dashboard',emp]">Cancel</button></div>
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+
+ -->
+ <div class='page'>
+  <div class="container">
+   <form class="form-horizontal" role="form">
+     <legend style="color: wheat;"> Upadate</legend>
+     <!-- <div class="image">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQpLP8nDtZAWLbUPAGnndgx_RL8VT732G48u9mwUkyu2qXVbEtcw" alt="HTML5 Icon" style="width:180px;height:130px;">
+     </div> -->
+     <div class="form-group">
+         <label class="col-sm-3 control-label" style="color: wheat;">Employee Id</label>
+       <div class="col-sm-9">
+           <input type="text"  placeholder={{getEmpId()}} class="form-control" autofocus readonly>      </div>
+     </div>
+     <div class="form-group">
+       <label class="col-sm-3 control-label" style="color: wheat;">Employee Name</label>
+     <div class="col-sm-9">
+         <input type="text"  placeholder={{employees1.empName}} class="form-control" autofocus readonly>      </div>
+   </div>
+   <div class="form-group">
+     <label class="col-sm-3 control-label" style="color: wheat;">Manager </label>
+   <div class="col-sm-9">
+       <input type="text"  placeholder={{manager.empName}} class="form-control" autofocus readonly>      </div>
+ </div>
+     <div class="form-group">
+         <label class="col-sm-3 control-label" style="color: wheat;">Leave Balance</label>
+       <div class="col-sm-9">
+           <input type="text"  placeholder={{employees1.empLeaveBalance}} class="form-control" autofocus readonly>      </div>
+     </div>
+    
+     
+     <!-- <div class="form-group">
+         <label  class="col-sm-3 control-label" >Applying Date</label>
+         <div class="col-sm-9">
+               <input type="date" class="form-control" name="curDate" [(ngModel)]="curDate" readonly>
+         </div>
+       </div> -->
+     <div class="form-group">
+       <label  class="col-sm-3 control-label" style="color: wheat;">Start Date</label>
+       <div class="col-sm-9">
+           
+             <input type="date" class="form-control"  name="startDate" min="{{cDate | date: 'MM/dd/yyyy'}}" [(ngModel)]="startDate" #leavestart="ngModel" >
+       </div>
+     </div>
+     <div class="form-group">
+       <label  class="col-sm-3 control-label" style="color: wheat;">End Date</label>
+       <div class="col-sm-9">
+           <input type="date" class="form-control" name="endDate" [min]="startDate" [(ngModel)]="endDate" #leaveend="ngModel" required >
+           
+       </div>
+     </div>
+     <div class="form-group">
+       <label  class="col-sm-3 control-label" style="color: wheat;" >No. Of Days</label>
+       <div class="col-sm-9">
+           <h4 style="color: wheat;">{{noOfDays}}</h4>
+           
+       </div>
+     </div>
+     <!-- <div class="form-group">
+       <label class="col-sm-3 control-label" >Leave Type</label>
+       <div class="col-sm-9">
+         <select  class="form-control" >
+             <option>Select below</option>
+           <option>Earned Leave</option>
+         </select>
+       </div>
+     </div> -->
+     <div class="form-group">
+       <label class="col-sm-3 control-label" style="color: wheat;" >Leave Reason</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="reason" [(ngModel)]="reason" #leavereason="ngModel" required   >
+           </div> 
+         </div>
+  
+     <!-- <div class="form-group">
+        <div class="col-sm-9 col-sm-offset-3"> --> 
+             <button class="btn-primary"  (click)="applyButton()">Update</button>
+       
+       <!-- <div class="col-sm-9 col-sm-offset-3"> -->
+         <button class="btn-primary2"  [routerLink]="['/dashboard',emp]">Cancel</button>
+       </form>
+   </div>
+    
+   {{cDate | date: 'MM/dd/yyyy'}}
+   </div>
+ 

@@ -1,0 +1,68 @@
+<div class="parallax"></div>
+<div class="sidenav">
+    <span><a (click)="goToApplyLeave()">Apply</a></span>
+    <span><a (click)="goToLeaveHistory()">Leave History</a></span>
+    <span><a (click)="goToPending()">Pending</a></span>
+    <!-- <span><a (click)="goToApprove()">Apply and Approve</a></span> -->
+
+  </div>
+  <div class="container" style="height:400px;background-color:#ffffff6c;font-size:36px;margin-top:-900px">
+        
+          
+          <div class="row">
+            <div class="col-sm-3" > 
+              <img src="{{employees.empProfileUrl}}" class="img-responsive" style="width:100%;height:100%;border-radius: 50px;" alt="Image">
+            </div>
+            <div class="col-sm-3"> 
+              <img src="https://images.pexels.com/photos/1061576/pexels-photo-1061576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-responsive" style="width:100%;height:100%;border-radius: 50px;" alt="Image">
+            </div>
+            <div class="col-sm-3"> 
+              <img src="https://images.pexels.com/photos/1179800/pexels-photo-1179800.jpeg?auto=compress&cs=tinysrgb&h=350" class="img-responsive" style="width:100%;height:100%;border-radius: 50px;" alt="Image">
+            </div>
+           
+          </div>
+          <div style="margin-top: 25px;">
+            <span style="margin-left:100px;margin-right: 220px;"><button type="button" class="btn " (click)="goToEmpDetails()" style="background-color:rgba(5, 5, 5, 0.541);color:white">Empoloyee Details</button></span>
+            <span><button type="button" style="margin-right: 200px;background-color:rgba(5, 5, 5, 0.541);color:white"class="btn" (click)="goToMgrDetails()"  >Manager Details</button></span>
+            <span><button type="button" class="btn" (click)=" goToPendinglog()"  style="background-color:rgba(5, 5, 5, 0.541);color:white">Reporting Employees</button></span>
+          </div>
+      </div>
+
+      <div class="container" style="height:220px;background-color:#ffffff6c;font-size:36px;margin-top:100px;">
+          <div class="row" >
+          <div class="col-sm-4" style="margin-left:100px "><h6 style="color:rgba(255, 255, 255, 0.562);text-align:center;margin-top:0.5cm;">Number of Employees Under You</h6><p style="color:rgba(255, 255, 255, 0.637);text-align:center;"><font size="500">{{count1}}</font></p></div>
+          <div class="col-sm-4"><h6 style="color:rgba(255, 255, 255, 0.637);text-align:center;margin-top:0.5cm;">Number of Leaves Applied</h6><p style="color:rgba(255, 255, 255, 0.637);text-align:center;"><font size="500">{{count3}}</font></p></div>
+          <div class="col-sm-4"><h6 style="color:rgba(255, 255, 255, 0.637);text-align:center;margin-top:0.5cm;">Number of Days Took Leave</h6><p style="color:rgba(255, 255, 255, 0.637);text-align:center;"><font size="500">{{count4}}</font></p></div>
+          <div class="col-sm-4"><h6 style="color:rgba(255, 255, 255, 0.637);text-align:center;margin-top:0.5cm;">Number of Pending leaves to Approve/Deny</h6><p style="color:rgba(255, 255, 255, 0.637);text-align:center;"><font size="500">{{count2}}</font></p></div>
+      </div></div>
+      
+      <!-- <div class="container" style="height:220px;background-color:#ffffff6c;font-size:36px;margin-top:100px;">
+        <div class="row" >
+        <div class="col-sm-4" style="margin-left:100px"><h6 style="color:rgba(255, 255, 255, 0.562);text-align:center;margin-top:0.5cm;">Number of Employees Under You</h6><p style="color:rgba(255, 255, 255, 0.637);text-align:center;"><font size="500">{{count1}}</font></p></div>
+        <div class="col-sm-4"><h6 style="color:rgba(255, 255, 255, 0.637);text-align:center;margin-top:0.5cm;">Number of Leaves Applied</h6>    <mwl-gauge
+          [max]="10"
+          [dialStartAngle]="-90"
+          [dialEndAngle]="-90.001"
+          [value]="gv3"
+          [animated]="false"
+          [animationDuration]="1">
+        </mwl-gauge></div>
+        <div class="col-sm-4"><h6 style="color:rgba(255, 255, 255, 0.637);text-align:center;margin-top:0.5cm;">Number of Days Took Leave</h6><mwl-gauge
+          [max]="24"
+          [dialStartAngle]="-90"
+          [dialEndAngle]="-90.001"
+          [value]="gv4"
+          [animated]="false"
+          [animationDuration]="1">
+        </mwl-gauge></div>
+        <div class="col-sm-4"><h6 style="color:rgba(255, 255, 255, 0.637);text-align:center;margin-top:0.5cm;">Number of Pending leaves to Approve/Deny</h6><mwl-gauge
+          [max]="20"
+          [dialStartAngle]="-90"
+          [dialEndAngle]="-90.001"
+          [value]="gv2"
+          [animated]="false"
+          [animationDuration]="1">
+        </mwl-gauge></div>
+    </div>
+
+</div> -->

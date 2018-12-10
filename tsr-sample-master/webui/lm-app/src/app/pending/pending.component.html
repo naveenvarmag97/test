@@ -1,0 +1,73 @@
+
+<div style="text-align:center;background-color:#5bc0de;    margin-left: 347px;
+margin-right:  271px;
+margin-bottom: -8px;">
+        <h1>
+        {{title}}
+        </h1>
+      </div>
+<div  class="dt">
+   
+    <table class="table" border="1">
+        <thead>
+            
+                <tr style="color:rgb(41, 148, 150);">
+                    <th>LEAVE ID</th>
+                    <th>START DATE</th>
+                    <th>END DATE</th>
+                    <th>APPLIED ON</th>
+                    <th>NO OF DAYS</th>
+                    <th>LEAVE TYPE</th>
+                    <th>REASON</th>
+                    <th>LEAVE STATUS</th>
+                    <th>MANAGER COMMENTS</th>
+                    <th>Edit Leave Application</th>
+                </tr>
+            </thead>
+            <tbody class="leavePending">
+                <tr *ngFor="let leavepending of leavePending;let i = index">
+                    <td>
+                        <h5>{{leavepending.leaveId}}</h5>
+                    </td>
+                    <td>
+                        <h5>{{leavepending.startDate}}</h5>
+                    </td>
+                    <td>
+                        <h5>{{leavepending.endDate}}</h5>
+                    </td>
+                    <td>
+                        <h5>{{leavepending.appliedOn}}</h5>
+                    </td>
+                    <td>
+                        <h5>{{leavepending.noOfDays}}</h5>
+                    </td>
+                    <td>
+                        <h5>{{leavepending.leaveType}}</h5>
+                    </td>
+                    <td>
+                        <h5>{{leavepending.reason}}</h5>
+                    </td>
+                    <td>
+                        <h5>{{leavepending.leaveStatus}}</h5>
+                    </td>
+                    <td>
+                        <h5>{{leavepending.managerComments}}</h5>
+                    </td>
+                    <td>
+                        <button type="button"  (click)="goToEditLeave(i)"  class="btn-info">Edit</button>
+                    </td>
+                </tr>
+            <tbody>
+                
+        
+        
+           
+    </table>
+</div>
+<div style="margin-left: 660px;">
+    <br>
+        <button type="submit" class="btn btn-primary" (click)="onback()" style="background-color:#5bc0de;color:black">Back</button>
+  </div>
+
+    
+    

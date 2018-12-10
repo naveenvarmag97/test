@@ -1,0 +1,43 @@
+.navbar {
+     
+    margin-bottom: 0;
+    
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    height: 65px;
+    margin-left: -65px;
+}
+.navbar li a, .navbar .navbar-brand {
+  color: wheat !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color:wheat !important;
+  background-color: #5bc0de !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+.header .col {
+    background-color:lightgrey;
+}
+
+.col {
+    border: solid 1px grey;
+    border-bottom-style: none;
+    border-right-style: none;
+    max-width :25% !important;
+}
+
+.col:last-child {
+    border-right: solid 1px grey;
+}
+
+.row:last-child .col {
+    border-bottom: solid 1px grey;
+}

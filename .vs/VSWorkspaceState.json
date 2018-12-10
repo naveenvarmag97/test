@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\tsr-sample-master",
+    "\\tsr-sample-master\\restservice",
+    "\\tsr-sample-master\\restservice\\leavemanager",
+    "\\tsr-sample-master\\restservice\\leavemanager\\src",
+    "\\tsr-sample-master\\restservice\\leavemanager\\src\\main",
+    "\\tsr-sample-master\\restservice\\leavemanager\\src\\main\\webapp",
+    "\\tsr-sample-master\\restservice\\leavemanager\\src\\main\\webapp\\WEB-INF"
+  ],
+  "SelectedNode": "\\tsr-sample-master\\restservice\\leavemanager\\src\\main\\webapp\\WEB-INF\\web.xml",
+  "PreviewInSolutionExplorer": false
+}

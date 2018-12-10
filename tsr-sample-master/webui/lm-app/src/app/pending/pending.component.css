@@ -1,0 +1,33 @@
+.dt{
+    margin-left: 349px;
+    width: 500px
+    
+  }
+  th{
+    height: 40px;
+    text-align: center;
+  }
+  tr{
+    color: wheat;
+  }
+  tr:hover {background-color:#5bc2de86;}
+  .table{
+    background-color: #252727a2;
+    border: 1px  solid #5bc0de;
+  }
+  .parallax {
+    /* The image used */
+     background-image: url("https://i.ytimg.com/vi/t0kGRcd-IFY/maxresdefault.jpg"); 
+
+    /* Set a specific height */
+  /* background-color: #388b9675; */
+    min-height: 1000px; 
+    margin-top: -75px;
+    
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

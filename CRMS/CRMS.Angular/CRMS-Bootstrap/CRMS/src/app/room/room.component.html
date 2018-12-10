@@ -1,0 +1,69 @@
+<div class="container">
+
+    <div class="row">
+        <h1>Manange Rooms</h1>
+    </div>
+
+    <div class="row">
+        <a [routerLink]="['/room/form', {}]" id = 'addRoom' routerLinkActive="active">
+            <i class="fas fa-plus-circle fa-2x btn-circle"></i>
+        </a>
+        <i (click)="refresh()" class="fas fa-sync-alt fa-2x btn-circle"></i>
+    </div>
+    <div class="row">
+        <table class="table table-hover" [mfData]="roomslist" [mfSortOrder]="sortOrder" #mf="mfDataTable" [mfSortBy]="sortBy" [mfRowsOnPage]="rowsOnPage">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        <mfDefaultSorter by="Name">Room Name</mfDefaultSorter>
+                    </th>
+                    <th>
+                        <mfDefaultSorter by="Location">Location</mfDefaultSorter>
+                    </th>
+                    <th>
+                        <mfDefaultSorter by="Capacity">Capacity</mfDefaultSorter>
+                    </th>
+                    <th>
+                        <mfDefaultSorter by="name">Room Type</mfDefaultSorter>
+                    </th>
+                    <th>
+                        <mfDefaultSorter by="IsActive">Status</mfDefaultSorter>
+                    </th>
+                    <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf="mf.data.length==0">
+                    <td colspan="6" class="text-center">
+                        <span>No Records Found</span>
+                    </td>
+                </tr>
+                <tr *ngFor="let item of mf.data">
+                    <td id='{{item.name}}'>{{item.name}}</td>
+                    <td>{{item.location}}</td>
+                    <td>{{item.capacity}}</td>
+                    <td>{{item.name | uppercase}}</td>
+                    <td>
+                        <span *ngIf="item.isActive" class="badge badge-pill badge-success">Active</span>
+                        <span *ngIf="!item.isActive" class="badge badge-pill badge-danger">In-Active</span>
+                    </td>
+                    <td>
+                        <a [routerLink]="['/room/form', item]" skipLocationChange>
+                            <i class="fas fa-edit btn-circle"></i>
+                        </a>
+                        <i (click)="delete(item)" class="fas fa-trash-alt btn-circle"></i>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <mfBootstrapPaginator></mfBootstrapPaginator>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,24 @@
+.container{
+    background-image: url("https://dollarfootage.com/wp-content/uploads/2017/08/Abstract-business-background-newsroom-geometric-futuristic-field-white-with-black-lines-3-HD-img.jpg");
+    background-repeat:no-repeat;
+    margin-top:100px;
+    height:600px;
+    
+}
+.dt{
+    margin-left: 200px;
+    width: 500px
+    
+  }
+  th{
+    height: 40px;
+    text-align: center;
+  }
+  tr{
+    color: wheat;
+  }
+  tr:hover {background-color:#5bc2de88;}
+  .table{
+    background-color: #252727a4;
+    border: 1px  solid #5bc0de;
+  }

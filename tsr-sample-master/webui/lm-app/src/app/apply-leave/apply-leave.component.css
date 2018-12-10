@@ -1,0 +1,86 @@
+.page{
+    background-image: url("https://i.gifer.com/TBao.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 4%;
+}
+.main{
+    height:590px;
+    width :800px;
+    text-align: center;
+    margin-left: 17%;
+    padding-top: 6%;
+    margin-top: -10%;    
+    color: wheat;
+}
+.details{
+   color: wheat;
+   margin-top: 3%;
+   margin-left: -5%;
+   margin-right: 25%;
+   padding:40px;
+}
+.name {
+    float: right;
+}
+.id{
+    float: left;
+}
+.depart{
+    float:left;
+}
+.emp{
+    float: top;
+}
+.man{
+    float: right;
+}
+.dep{
+    margin-top: 6%;
+    float: bottom;
+}
+.bal{
+    margin-top: 10%;
+}
+.submit{
+    float: left;
+}
+.cancel{
+    float: right;
+}
+.start{
+    float: left;
+}
+.end{
+    float: right;
+}
+.dates{
+    width:600px;
+    float: center;
+    height:30px;
+    margin-left: 10%;
+}
+.actions{
+    width: 200px;
+    margin-left:28%;
+}
+.reason{
+    margin-top: 2%;
+    width:200px;
+    float: right;
+    margin-right: 36%;
+}
+.actions{
+    margin-top: 15%;
+}
+#heading{
+    margin-left: 2%;
+}
+option {
+    color: rgb(14, 9, 2);
+}
+select {
+    color: rgb(14, 9, 2);
+}
+
+

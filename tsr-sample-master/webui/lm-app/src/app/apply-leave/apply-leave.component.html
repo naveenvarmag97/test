@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class='page'>
+    
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Company Holidays
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li data-toggle="tooltip" data-placement="right" title="New Year">{{holidays[0]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Republic Day">{{holidays[1]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Holi">{{holidays[2]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Good Friday">{{holidays[3]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Labour day">{{holidays[4]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="id-UL_fitr">{{holidays[5]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Independence day">{{holidays[6]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Ganesh Charturthi">{{holidays[7]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Gandhi Jayanti">{{holidays[8]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Ayudapooja">{{holidays[9]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Dassera">{{holidays[10]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Kannada Rajya Utsav">{{holidays[11]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Diwali">{{holidays[12]|date:'MMM dd yyyy'}}</li>
+          <li data-toggle="tooltip" data-placement="right" title="Christmas">{{holidays[13]|date:'MMM dd yyyy'}}</li>
+        </ul>
+      </div>
+      <script>
+          $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();   
+          });
+          </script>
+  <div class='main'>
+<h3 id="heading">Leave Application</h3>
+
+<div class='container'>
+  <div class='details'>
+    <div class='emp'>
+    <h5 class='id'>EMPLOYEE ID:    <span style="margin-left:20px;color:aquamarine">{{getEmpId()}}</span></h5>
+    <h5 class='name'>EMPLOYEE NAME:  <span style="margin-left:20px;color:aquamarine"> {{employees1.empName}}</span></h5>
+  </div>
+  <div class='dep'>
+    <h5 class='depart'>DEPARTMENT:<span style="margin-left:20px;color:aquamarine">{{employees1.empDepartment}}</span></h5>
+    <h5 class='man'>MANAGER: <span style="margin-left:20px;color:aquamarine">{{manager.empName}}</span></h5>
+  </div>
+<div class='bal'>
+    <h5>LEAVE BALANCE: <span style="margin-left:20px;color:aquamarine">{{employees1.empLeaveBalance}}</span></h5>
+  </div>
+  </div>
+  <div class='applyPart'>
+    
+    <div class='dates'>
+    <div class='start'><h5>Start Date:</h5>  <input type="date" class="form-control"  name="startDate" min="{{cDate | date: 'MM/dd/yyyy'}}" [(ngModel)]="startDate" #leavestart="ngModel" required style="color:black"></div>
+    <div class='end'><h5>End Date:</h5>  <input type="date" class="form-control" name="endDate" [min]="startDate" [(ngModel)]="endDate" #leaveend="ngModel" required style="color:black"></div>
+    <div class='noOfDays'><h5>No Of Days:</h5><span style="margin-left:20px;color:aquamarine;"><h4>{{noOfDays}}</h4></span></div>
+  </div>
+  <div class='type'></div>
+  <div class='reason'><h5>Reason:</h5>   <input type="text" class="form-control" name="reason" [(ngModel)]="reason" #leavereason="ngModel" required />
+   <br> Leave Type :<select [(ngModel)]="leaveType" class="form-control">
+        <option value="EL">EL</option>
+      <option value="SICK">SICK</option> 
+      <option value="PLML">PLML</option>
+    </select><!-- <h5>leaveType:</h5><input class="form-control" type="text" placeholder="Please Type Here" name="leaveType" [(ngModel)]= "leaveType" required> -->
+   </div>
+
+  <div class='actions'>
+    <div class='submit'><button type="SUBMIT" class="btn btn-primary" (click)="applyButton()">Apply Leave</button></div>
+    <div class='cancel'><button type="SUBMIT" Class="btn btn-danger" [routerLink]="['/dashboard',emp]">Cancel</button></div>
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+
+

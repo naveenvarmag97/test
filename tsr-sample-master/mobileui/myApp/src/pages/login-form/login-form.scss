@@ -1,0 +1,62 @@
+.hex {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+
+    padding-bottom: 50px;
+    margin-top: 80px;
+}
+.opt {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: #00ab;
+    padding-top: 35px;
+}
+
+ .heximg {
+    border-radius: 100%;
+ }
+ .container {
+     align-self: center;
+ }
+ .la{
+     padding-left: 40%;
+ }
+ .container {
+    position: relative;
+    z-index: 4;
+    background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #191654, rgb(67, 198, 169));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #191654, rgb(67, 194, 198)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: wheat;
+    max-width: 300px;
+    margin: 0 auto 50px;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 400px 40px 0 rgba(41, 34, 34, 0.2), 0 40px 40px 0 rgba(43, 29, 29, 0.24);
+  }
+  .loginhtm {
+    margin-top: -75px;
+    background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #191654, rgb(67, 198, 165));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #191654, rgb(67, 198, 180)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 40px;
+    padding-bottom: 40px;
+    height:100%;
+  }
+  .empno {
+    font-size: 25px;
+    color: peachpuff;
+    font-style: bold;
+  }
+  .buttons {
+width:140px;
+margin-left: 22%;
+  }
+  .cancelButton {
+      float: right;
+      
+  }
+  .loginButton {
+      float: left;
+  }

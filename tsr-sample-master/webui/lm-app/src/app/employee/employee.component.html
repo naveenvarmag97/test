@@ -1,0 +1,64 @@
+<div style="text-align:center;background-color:#5bc0de;margin-left:200px;margin-right: 561px;width:953px;">
+  <h1 style="width:953px;">
+    Welcome to {{title}}!
+  </h1>
+</div>
+<div class="dt">
+    <table  border="1" class="table " style=" margin-top: -10px">
+        <thead class="th">
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Manager ID</th>
+                <th>Date Of Joining</th>
+                <th>Leave Balance</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody class="employees">
+            <tr *ngFor="let employee of employees; let i = index" [attr.data-index]="i">
+                <td>
+                    <h5>{{employee.empId}}</h5>
+                </td>
+                <td>
+                    <h5>{{employee.empName}}</h5>
+                </td>
+                <td>
+                    <h5>{{employee.empEmail}}</h5>
+                </td>
+                <td>
+                    <h5>{{employee.empPhone}}</h5>
+                </td>
+                <td>
+                    <h5>{{employee.managerId}}</h5>
+                </td>
+                <td>
+                    <h5>{{employee.empDoj}}</h5>
+                </td>
+                <td>
+                    <h5>{{employee.empLeaveBalance}}</h5>
+                </td>
+                <td>
+                    <h5>{{employee.empDepartment}}</h5>
+                </td>
+                <td>
+                    <h5><img src="{{employee.empProfileUrl}}" style ="width:50px;height:50px"></h5>
+                </td>
+                <td>
+                  <button type="button"  (click)="loginForm(i)"  class="btn-info">Login</button>
+                   
+                </td>                
+            </tr>
+            <!-- <tr>
+                <td colspan=10 align="center">
+                        <div>
+                                <button type="SUBMIT" class="btn btn-primary" (click)="goToChatbot()">HELP</button>
+                              </div>
+                </td>
+            </tr> -->
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,130 @@
+<!-- <div class="dt">
+    <table border="1"  class="table">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Manager ID</th>
+                <th>Date Of Joining</th>
+                <th>Leave Balance</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <h5>{{employees.empId}}</h5>
+                </td>
+                <td>
+                    <h5>{{employees.empName}}</h5>
+                </td>
+                <td>
+                    <h5>{{employees.empEmail}}</h5>
+                </td>
+                <td>
+                    <h5>{{employees.empPhone}}</h5>
+                </td>
+                <td>
+                    <h5>{{employees.managerId}}</h5>
+                </td>
+                <td>
+                    <h5>{{employees.empDoj}}</h5>
+                </td>
+                <td>
+                    <h5>{{employees.empLeaveBalance}}</h5>
+                </td>
+                <td>
+                    <h5>{{employees.empDepartment}}</h5>
+                </td>            
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+<style>
+    #example1 {
+   /* background-image:url(http://hexaware.com/wp-content/uploads/2017/06/Quality-Policy.jpg);
+  background-repeat: no-repeat, repeat; */
+  height: 100%;
+  width: 100%;
+  /* background-size: cover; */
+  padding: 15px;
+  }
+  
+  
+  
+  td,tr {
+  background: rgba(0, 3, 7, 0.2);
+  color: #fff;
+  text-align:left;
+  letter-spacing: 1px;
+  line-height: 2.5;
+  font-size: 18px;
+  font-family: Helvetica;
+  font-style:normal;
+  border-style: hidden;
+  padding-bottom: 30px;
+  /* border-radius: 25px; */
+  
+  }
+  h1{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: black;
+  }
+  
+  </style>
+ 
+ <div  style="text-align:center;background-color:#5bc0de;margin-left: 213px;margin-right: 213px;margin-bottom: -75px;-moz-box-shadow: 0 0 6px #363535;
+ -webkit-box-shadow: 0 0 6px #363535;
+ box-shadow: 0 0 6px #363535;
+ ">
+    <h1>
+      Manager Details
+    </h1>
+  </div>
+      <div style="padding-top:68px;-moz-box-shadow: 0 0 6px #363535;
+      -webkit-box-shadow: 0 0 6px #363535;
+      box-shadow: 0 0 6px #363535;" id="example1" class="container">
+           <body>
+              
+              <table align = "center" width = "70%" border = "0" style="-moz-box-shadow: 0 0 6px #363535;
+              -webkit-box-shadow: 0 0 6px #363535;
+              box-shadow: 0 0 6px #363535;">
+                 
+                 
+                 <tr valign = "top">
+                    <td align = "center" bgcolor = "grey" width = "40%">
+                       <div style="padding-left:68px" align = "left">
+                          EMPLOYEE ID:<br />
+                          MANAGER NAME:<br />
+                          EMAIL:<br />
+                          MOBILE:<br />
+                          
+                          DEPARTMENT:<br />
+                                                    
+                       </div>
+                    </td>
+                    
+                    <td align = "center" bgcolor = "grey" width = "60%">
+                        <div style="padding-left:68px" align = "left">
+                            {{getEmpId()}}<br/>
+                            {{manager.empName}}<br/>
+                            {{manager.empEmail}}<br/>
+                            {{manager.empPhone}}<br/>
+                           
+                            {{manager.empDepartment}}<br/>
+                            
+                        </div>
+                    </td>
+                </tr>
+                </table>
+            </body>
+            </div>
+            <div style="margin-left: 660px;">
+                  <br>
+                      <button type="submit" class="btn btn-primary" (click)="onback()" style="background-color:#5bc0de;color:black">Back</button>
+                </div>
+
+

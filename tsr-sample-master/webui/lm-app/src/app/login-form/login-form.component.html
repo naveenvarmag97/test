@@ -1,0 +1,22 @@
+<div class='loginhtm'>
+<div class='hex' style="text-align:center" >
+  <img width="200" src="{{employees.empProfileUrl}}" class='heximg'>
+</div>
+<div>
+<form class="container">
+    <div class="form-">
+      <label for="exampleInputEmail1">Employee ID</label>
+      <div class='empno'>
+      {{emp}}
+    </div>
+    
+
+    </div><br>
+<div class='buttons'>
+  <div class='loginButton'><button type="SUBMIT" class="btn btn-primary" (click)="loginButton()">Login</button></div>
+  <div class='cancelButton'><button type="SUBMIT" class="btn btn-danger" (click)="cancelButton()">cancel</button></div>
+</div>
+    
+  </form>
+</div>
+</div>

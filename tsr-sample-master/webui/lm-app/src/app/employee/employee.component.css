@@ -1,0 +1,50 @@
+.body{
+    
+     background-image: url("https://dollarfootage.com/wp-content/uploads/2017/08/Abstract-business-background-newsroom-geometric-futuristic-field-white-with-black-lines-3-HD-img.jpg");
+     background-repeat:no-repeat;
+     
+ 
+ 
+   }
+   .navbar {
+     
+    margin-bottom: 0;
+    background-color: #363535;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    height: 65px;
+    margin-left: -65px;
+}
+.navbar li a, .navbar .navbar-brand {
+  color: wheat !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color:wheat !important;
+  background-color: #5bc2de86 !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+.dt{
+  margin-left: 200px;
+  width: 300px
+  
+}
+th{
+  height: 40px;
+  text-align: center;
+}
+tr{
+  color: wheat;
+}
+tr:hover {background-color:#5bc2de85;}
+.table{
+  background-color: #252727;
+  border: 1px  solid #5bc0de;
+}

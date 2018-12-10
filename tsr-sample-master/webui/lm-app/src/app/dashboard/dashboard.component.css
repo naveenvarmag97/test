@@ -1,0 +1,314 @@
+.sidenav {
+    height: 180px; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgba(32, 31, 31, 0.267); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    margin-top: 70px;
+    
+}
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fcf5f5;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid;
+}
+
+.sidenav a:hover {
+    background-color: #ffffff6c;
+    transform: linear all 0.40s;
+
+   
+}
+.carousel-item{
+    background-size: contain; 
+}
+
+.col-sm-3 {
+    margin-left: 55px;
+    background-size: contain;
+    display:inline;
+    height: 250px;
+    background-image: url("https://dollarfootage.com/wp-content/uploads/2017/08/Abstract-business-background-newsroom-geometric-futuristic-field-white-with-black-lines-3-HD-img.jpg");
+    background-repeat:no-repeat;
+    background-size: contain;
+    border: 1px solid rgb(22, 20, 20); 
+    
+    
+}
+.row{
+    margin-top: 70px;
+}
+.navbar-fixed-top{
+    margin-bottom: 25px;
+    height: 60px;
+}
+.container-fluid {
+    padding: 60px 50px;
+}
+.slideanim {visibility:hidden;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+@keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+}  
+.jumbotron {
+    background-image: url("https://dollarfootage.com/wp-content/uploads/2017/08/Abstract-business-background-newsroom-geometric-futuristic-field-white-with-black-lines-3-HD-img.jpg");
+    background-repeat:no-repeat;
+    background-size: contain;
+    height: 400px; 
+    margin-top: -20px;
+    
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+}
+  .container-fluid {
+      padding: 60px 50px;
+  }
+.bg-grey {
+    background-color: #f6f6f6;
+}
+.logo-small {
+    color: #f4511e;
+    font-size: 50px;
+}
+.logo {
+    color: #f4511e;
+    font-size: 200px;
+}
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+}
+.carousel-indicators li {
+    border-color: #f4511e;
+}
+.carousel-indicators li.active {
+    background-color: #f4511e;
+}
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+.item span {
+    font-style: normal;
+}
+.panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+}
+.panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+
+
+
+
+
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+}
+.slideanim {visibility:hidden;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  } 
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  } 
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+  .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+  }
+}
+
+.a1{
+  
+    background-image: url("https://dollarfootage.com/wp-content/uploads/2017/08/Abstract-business-background-newsroom-geometric-futuristic-field-white-with-black-lines-3-HD-img.jpg");
+    background-repeat:no-repeat;
+}
+.parallax {
+    /* The image used */
+     background-image: url("https://i.ytimg.com/vi/t0kGRcd-IFY/maxresdefault.jpg"); 
+
+    /* Set a specific height */
+  /* background-color: #388b9675; */
+    min-height: 1000px; 
+    margin-top: -75px;
+    
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+  }
+  .col-sm-3{
+ /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    background: #ffffff6c;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    transition: transform .2s;
+  }
+  .col-sm-3:hover {
+    transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+  #circle{
+    width: 100px;
+    height: 100px;
+    background: #000000;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+  }
+  img{
+    max-width:100%;
+    max-height:100%;
+  }
+  .col-sm-4{
+    /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+       background: #0000006c;
+       -moz-border-radius: 50px;
+       -webkit-border-radius: 50px;
+       border-radius: 50px;
+       height:150px;
+       margin-right:50px;
+       width:200px;
+       transition: transform .2s;
+       margin-bottom: 10px;
+     }
+     mwl-gauge {
+        margin-top: -0.5cm;
+    width: 135px;
+    height: 135px;
+    display: block;
+    padding: 10px;
+  }
+  mwl-gauge > .gauge > .dial {
+    stroke: rgb(172, 61, 61);
+    stroke-width: 2;
+    fill: rgba(0,0,0,0);
+  }
+  mwl-gauge > .gauge > .value {
+    stroke: rgb(47, 227, 255);
+    stroke-width: 2;
+    fill: rgba(0,0,0,0);
+  }
+  mwl-gauge > .gauge > .value-text {
+    fill: rgb(47, 227, 255);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1cm;
+  }
+  

@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <form class="col-md-6" (ngSubmit)="save()" (mouseleave)="onFormMouseLeave($event)" [formGroup]="bookingForm" ngNativeValidate>
+      <div>
+        <h1>New Booking</h1>
+      </div>
+      <br/>
+      <div class="alert alert-danger" role="alert" *ngIf="errors.length > 0">
+          <ul>
+              <li *ngFor="let error of errors">
+                  {{ error }}
+              </li>
+          </ul>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-12">
+              <label for="name">Room</label>
+          <mat-form-field class="example-full-width">
+              <input type="text" class="form-control" id='roomName' placeholder="Select Room" matInput [formControl]="roomControl" [matAutocomplete]="auto">
+              <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let room of filteredRoomList" id='{{room.name}}' [value]="room">
+                    {{room.value}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+      </div>
+        
+      <!-- <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="name">Room</label>
+          <select class="form-control" formControlName="roomId" name="roomId">
+            <option value="">Choose...</option>
+            <option [value]="room.id" *ngFor="let room of roomList">
+              {{room.name}}
+            </option>
+          </select>
+        </div>
+      </div> -->
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="startDatePicker">Start Date</label>
+          <input class="" formControlName="startDate" id = 'startDate' [min]="mindate" [matDatepicker]="startDatePicker">
+          <mat-datepicker-toggle [for]="startDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #startDatePicker></mat-datepicker>
+          <input atp-time-picker formControlName="startTime" id='startTime' value="00:00"/>
+         
+        </div>
+        <small [hidden]="bookingForm.controls.startDate.valid || bookingForm.controls.startDate.untouched" class="text-danger">
+            Start Date & Time is required
+          </small>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="startDatePicker">End Date</label>
+            <input class="" formControlName="endDate" id='endDate' [min]="mindate" [matDatepicker]="endDatePicker">
+            <mat-datepicker-toggle class="" [for]="endDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #endDatePicker></mat-datepicker>
+            <input atp-time-picker formControlName="endTime" id='endTime' value="00:00"/>
+            
+          </div>
+          <small [hidden]="bookingForm.controls.endDate.valid || bookingForm.controls.endDate.untouched" class="text-danger">
+              End Date & Time is required
+            </small>
+        </div>
+
+      <button type="submit" id ='bookSubmit' class="btn btn-success">Save</button>
+      <a class="btn btn-warning" routerLink="/booking" routerLinkActive="active">
+        <span>Cancel</span>
+      </a>
+    </form>
+  </div>
+</div>

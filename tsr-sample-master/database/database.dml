@@ -1,0 +1,21 @@
+-- change this to your team id
+use ftp46;
+
+INSERT INTO EMPLOYEE VALUES(1000,"Anuj Pancholi",'1999-05-12',1000,918668640756,"anujpachOO@gmail.com",24,"Higher Management","assets\\images\\img1.jpg");
+
+
+-- Two Managers
+
+INSERT INTO EMPLOYEE VALUES(2000,"SoumyaShree Dwibedy",'2000-05-12',1000,918668640757,"SoumyaShree@gmail.com",24,"Admin","assets\\images\\img1.jpg");
+
+INSERT INTO EMPLOYEE VALUES(2001,"Yogesh Dubey",'1999-10-12',1000,918668640758,"dubeyyogesh10@gmail.com",24,"HR","assets\\images\\img1.jpg");
+
+
+-- Two Employees
+
+INSERT INTO EMPLOYEE VALUES(3000,"Naveen Varma",'2006-05-12',2001,918668640759,"varman781@gmail.com",14,"Hexa Innovation","assets\\images\\img1.jpg");
+
+INSERT INTO EMPLOYEE VALUES(3001,"Salim Merchant",'2003-04-12',2000,918668640760,"SalimMerchant@gmail.com",24,"Hexavarsity","assets\\images\\img1.jpg");
+
+
+

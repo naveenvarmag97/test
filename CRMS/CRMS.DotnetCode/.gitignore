@@ -1,0 +1,11 @@
+CRMS/v15/
+CRMS/bin
+CRMS/obj
+CRMS/log.txt
+Data/bin
+Data/obj
+packages
+Repository/bin
+Repository/obj
+
+.vs/

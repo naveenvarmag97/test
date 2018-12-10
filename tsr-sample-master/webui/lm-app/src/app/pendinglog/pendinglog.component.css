@@ -1,0 +1,61 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  
+  .lastRow {
+  font-family: 'Nunito', sans-serif;
+  COLOR: white;
+  background: rgb(78, 78, 78);
+  cursor:pointer;
+  
+  } 
+  .mainRow {
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  background:rgba(0, 0, 0, 0.575);
+  } 
+  .firstRow {
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  background:rgb(59, 59, 59);
+  } 
+  
+  table {
+  table-layout: fixed;
+  width: 1200px;
+  /* margin: 10px auto; */
+  }
+  
+  caption {
+  font-size: 1.6em;
+  font-weight: 400;
+  padding: 10px 0;
+  }
+  
+  thead th {
+  font-weight: 400;
+  background: #212529;
+  color: #FFF;
+  text-align: center;
+  }
+  
+  tr {
+  background: #010c0f;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+  }
+  
+  .lastRow:hover {
+  background: #488a96;
+  } 
+  .highlight{
+  background: rgba(81, 151, 230, 0.596);
+  }
+  td{
+  width :100px
+  }
+  .form-control{
+    width:10%;
+}

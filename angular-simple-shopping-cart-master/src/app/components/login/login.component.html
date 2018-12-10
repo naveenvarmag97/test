@@ -1,0 +1,45 @@
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body modal-body-sub_agile">
+        <div class="main-mailposi">
+          <span class="fa fa-envelope-o" aria-hidden="true"></span>
+        </div>
+        <div class="modal_body_left modal_body_left1">
+          <h3 class="agileinfo_sign">Sign In </h3>
+          <p>
+            Sign In now
+          </p>
+          <form #f="ngForm" (ngSubmit)="f.form.valid && onLogin()" novalidate>
+              <div class="alert alert-danger" role="alert" *ngIf="errorMessage">{{errorMessage}}</div>
+              
+            <div class="styled-input agile-styled-input-top">
+             <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                    
+              <input  type="text" id="username" [(ngModel)]="user.username" #username placeholder="Email" name="username"  pattern="[^ @]*@[^ @]*" [(ngModel)]="user.username" #username="ngModel" required >
+
+              <div *ngIf="f.submitted && !username.valid" class="help-block">an valid email is required</div>
+            </div>
+       
+            </div>
+            <div class="styled-input">
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+              <input type="password" id="password" #password [(ngModel)]="user.password" placeholder="Password" name="password" #password="ngModel"  required="">
+              <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+            </div>
+      
+            </div>
+            <input type="submit" value="Sign In" id="signinSubmit">
+          </form>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- //Modal content-->
+  </div>
+</div>

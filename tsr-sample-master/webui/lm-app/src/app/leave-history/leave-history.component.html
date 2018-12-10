@@ -1,0 +1,46 @@
+
+<div class="container" >
+    <div style="text-align:center;background-color:#5bc0de;margin-left:200px;margin-right: 280px">
+        <h1>
+        {{title}}
+        </h1>
+      </div>
+ <div  class="dt" >
+<table  border="1"  class="table">
+  <thead>
+    <tr>
+      <th>LeaveID</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Applied On</th>
+      <th>No. of days</th>
+      <th>LeaveType</th>
+      <th>Reason</th>
+      <th>Leave Status</th>
+      <th>Manager Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ld of leaveHistory" class="leaveHistory">
+      <td>{{ld.leaveId}}</td>
+      <td>{{ld.startDate}}</td>
+      <td>{{ld.endDate}}</td>
+      <td>{{ld.appliedOn}}</td>
+      <td>{{ld.noOfDays}}</td>
+      <td>{{ld.leaveType}}</td>
+      <td>{{ld.reason}}</td>
+      <td>{{ld.leaveStatus}}</td>
+      <td>{{ld.managerComments}}</td>
+    </tr>
+  </tbody>
+</table>
+<div style="margin-left: 270px;">
+
+  <br>
+      <button type="submit" class="btn btn-primary" (click)="onback()" style="background-color:#5bc0de;color:black">Back</button>
+</div>
+</div> 
+ 
+</div>
+ 
+

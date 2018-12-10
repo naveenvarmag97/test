@@ -1,0 +1,65 @@
+
+
+<span><div>
+    <input class="form-control" type="text" name="search" [(ngModel)]="filter" placeholder="QUICK FILTER">      
+</div></span><br><br>
+<div>
+  <table border="1" class="table table-striped">
+      <thead align="center">
+          <tr>
+              <th (click)="sort('leaveEmpId')">Employee ID
+                    <span class="glyphicon sort-icon"><i class="fa fa-fw fa-sort"></i></span>
+              </th>
+              <th>Leave ID</th>
+              <th>Leave Status</th>
+              <th>Manager Comments</th>
+              <th>Applied On</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th> Number Of Days</th>
+              <th colspan=3> Decision</th>
+          </tr>
+      </thead>
+      <tbody class="employees">
+          <tr *ngFor="let employee of leavePendingRevisit| orderBy: key : reverse | filter:filter; let i=index" >
+               
+              <td >
+                  <h5>{{employee.leaveEmpId}}</h5>
+                  <!-- <span class="glyphicon sort-icon"><i class="fa fa-fw fa-sort"></i></span> -->
+              </td>
+              <td>
+                  <h5>{{employee.leaveId}}</h5>
+              </td>
+              <td>
+                  <h5>{{employee.leaveStatus}}</h5>
+              </td>
+              <td>
+                  <h5>{{employee.managerComments}}</h5>
+              </td>
+              <td>
+                  <h5>{{employee.appliedOn}}</h5>
+              </td>
+              <td>
+                  <h5>{{employee.startDate}}</h5>
+              </td>
+              <td>
+                  <h5>{{employee.endDate}}</h5>
+              </td>
+              <td>
+                  <h5>{{employee.noOfDays}}</h5>
+              </td>
+              <td colspan=2>
+                  <button (click)="approveDenyRevisit(i)"  class="btn btn-success"  [disabled]="selectReview(i)"><h5>Approve</h5></button>
+              </td>
+              <td colspan=2>
+                  <button (click)="DenyRevisit(i)" class="btn btn-danger"  [disabled]="selectReviewDeny(i)"><h5>Deny</h5></button>
+              </td>
+          </tr>
+          <tr>
+              <td colspan=11 align="center">
+          <span><button  class="btn btn-danger" (click)=goBack()> Cancel</button></span>
+        </td>
+        </tr>
+      </tbody>
+  </table>
+</div>

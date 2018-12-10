@@ -1,0 +1,40 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cd ../crmsdotnet-dev/crms/crms.angular/crms-bootstrap/crms
+npm install
+npm run ng build</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.BatchFile>
+      <command>cd D:\dotnetpackage\crms\&#xd;
+cd D:&#xd;
+rmdir /s /q dist&#xd;
+&#xd;
+Xcopy /s /e /r /f /i  &quot;D:\workspace\Jenkins\workspace\crmsdotnet-dev\CRMS\CRMS.Angular\CRMS-Bootstrap\CRMS\dist&quot; &quot;D:\dotnetpackage\crms\dist&quot;</command>
+    </hudson.tasks.BatchFile>
+  </builders>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>crmsrestassured-dev</childProjects>
+      <threshold>
+        <name>UNSTABLE</name>
+        <ordinal>1</ordinal>
+        <color>YELLOW</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
+  <buildWrappers/>
+</project>

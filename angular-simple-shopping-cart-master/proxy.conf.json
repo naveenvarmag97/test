@@ -1,0 +1,9 @@
+{
+    "/shopec/*": {
+      "target": "http://localhost:9090",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": {"^/shopec" : "http://localhost:9090"}
+    }
+  }
